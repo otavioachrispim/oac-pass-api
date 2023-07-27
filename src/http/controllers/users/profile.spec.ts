@@ -15,7 +15,7 @@ describe('Profile (e2)', () => {
   it('should be able to get user profile', async () => {
     const { token } = await createAndAuthenticateUser(app);
 
-    const profileResponse = await await request(app.server)
+    const profileResponse = await request(app.server)
       .get('/me')
       .set('Authorization', `Bearer ${token}`)
       .send();
