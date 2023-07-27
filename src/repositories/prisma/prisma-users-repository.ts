@@ -6,11 +6,11 @@ export class PrismaUsersRepository implements UsersRepository {
   public items: User[] = [];
 
   async findById(id: string) {
-    const user = this.items.find((user) => user.id === id);
-
-    if (!user) {
-      return null;
-    }
+    const user = await prisma.user.findUnique({
+      where: {
+        id,
+      },
+    });
 
     return user;
   }
