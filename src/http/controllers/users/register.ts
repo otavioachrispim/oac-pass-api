@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { z } from 'zod';
 import { hash } from 'bcryptjs';
 import { RegisterService } from '@/services/register';
-import { PrismaUsersRepository } from '../../repositories/prisma/prisma-users-repository';
+import { PrismaUsersRepository } from '../../../repositories/prisma/prisma-users-repository';
 import { UserAlreadyExistsError } from '@/services/errors/user-already-exists-error';
 import { makeRegisterService } from '@/services/factories/make-register-service';
 
